@@ -1,5 +1,5 @@
 /* $Id$ */
-/* START LICENSE */
+/* --- START LICENSE --- */
 /* -------------------------------------------------------------------------- */
 /*                                                  The WWW Library - LibW3   */
 /*                                                  developed by Nishi        */
@@ -28,7 +28,7 @@
 /* Y WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY  */
 /* OF SUCH DAMAGE.                                                            */
 /* -------------------------------------------------------------------------- */
-/* END LICENSE */
+/* --- END LICENSE --- */
 
 #ifndef __W3GEMINI_H__
 #define __W3GEMINI_H__

@@ -51,5 +51,5 @@ $io->close;
 
 $repl = $repl . "/* " . ("-" x $rep) . " */\n";
 
-$str =~ s/\/\* START LICENSE \*\/\n(.+\n)?\/\* END LICENSE \*\//\/\* START LICENSE \*\/\n$repl\/\* END LICENSE \*\//gs;
+$str =~ s/\/\* --- START LICENSE --- \*\/\n(.+\n)?\/\* --- END LICENSE --- \*\//\/\* --- START LICENSE --- \*\/\n$repl\/\* --- END LICENSE --- \*\//gs;
 print $str;
