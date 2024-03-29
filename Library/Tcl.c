@@ -1,9 +1,9 @@
 /* $Id$ */
 /* START LICENSE */
 /* -------------------------------------------------------------------------- */
-/* The WWW Library - LibW3                                                    */
-/* developed by Nishi                                                         */
-/* http://nishi.boats/libw3                                                   */
+/*                                                  The WWW Library - LibW3   */
+/*                                                  developed by Nishi        */
+/*                                                  http://nishi.boats/libw3  */
 /* -------------------------------------------------------------------------- */
 /* Copyright (c) 2024 Nishi.                                                  */
 /* Redistribution and use in source and binary forms, with or without modific */

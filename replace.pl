@@ -16,14 +16,24 @@ my $repl = "/* " . ("-" x $rep) . " */\n";
 my $io = IO::Handle->new();
 
 if(open $io, '<', "HEADER"){
+	my $len = 0;
 	while(<$io>){
 		my @list = $_ =~ /.{1,$rep}/g;
 		for my $s (@list){
-			$repl = $repl . "/* $s" . (" " x ($rep - length($s))) . " */\n";
+			if(length($s) > $len){
+				$len = length($s);
+			}
+		}
+	}
+	$io->close;
+	open $io, '<', "HEADER";
+	while(<$io>){
+		my @list = $_ =~ /.{1,$rep}/g;
+		for my $s (@list){
+			$repl = $repl . "/* " . (" " x ($rep - $len - 1)) . "$s" . (" " x ($len - length($s) + 1)) . " */\n";
 		}
 	}
 	$repl = $repl . "/* " . ("-" x $rep) . " */\n";
-	$io->close;
 }
 
 $io = IO::Handle->new();
