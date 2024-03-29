@@ -131,7 +131,7 @@ CFLAGS += -g
 endif
 
 ifeq ($(WINDOWS),YES)
-.PHONY: all clean ./Library/w3.dll ./Example format src-archive archive
+.PHONY: all clean ./Library/w3.dll ./Example format src-archive archive replace
 
 ALL := ./Library/w3.dll ./Example
 
@@ -148,7 +148,7 @@ all: ./Library/W3Version.h ./w3.pc $(ALL)
 
 else
 
-.PHONY: all clean ./Library/libw3.so ./Library/libw3.a ./Example format src-archive archive
+.PHONY: all clean ./Library/libw3.so ./Library/libw3.a ./Example format src-archive archive replace
 
 ALL := ./Library/libw3.so ./Library/libw3.a ./Example
 
@@ -258,3 +258,9 @@ src-archive: clean ./Library/W3Version.h
 
 format:
 	clang-format -i `find Library Example -name "*.h" -or -name "*.c"`
+
+replace:
+	for i in $(wildcard Library/*.c Library/*.h) W3Version.h.m4; do \
+		cat $$i | perl replace.pl > $$i.new; \
+		mv $$i.new $$i; \
+	done
