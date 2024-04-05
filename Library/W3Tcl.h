@@ -33,12 +33,22 @@
 #ifndef __W3URL_H__
 #define __W3URL_H__
 
+/**
+ * @file W3Tcl.h
+ * @brief Tcl binding
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #include <tcl.h>
 
+/**
+ * @brief Initializes LibW3 for Tcl
+ * @param interp Tcl interpreter
+ * @return Tcl error code
+ */
 int W3_Init(Tcl_Interp* interp);
 
 #ifdef __cplusplus

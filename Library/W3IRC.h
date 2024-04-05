@@ -33,6 +33,11 @@
 #ifndef __W3IRC_H__
 #define __W3IRC_H__
 
+/**
+ * @file W3IRC.h
+ * @brief IRC part of LibW3
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -40,13 +45,61 @@ extern "C" {
 #include "W3Core.h"
 
 void __W3_IRC_Request(struct W3* w3);
+
+/**
+ * @brief Sets the username of the IRC connection.
+ * @param w3 Pointer to the struct
+ * @param username IRC username
+ */
 void W3_IRC_Set_Username(struct W3* w3, const char* username);
+
+/**
+ * @brief Sets the hostname of the IRC connection.
+ * @param w3 Pointer to the struct
+ * @param hostname IRC hostname
+ */
 void W3_IRC_Set_Hostname(struct W3* w3, const char* hostname);
+
+/**
+ * @brief Sets the realname of the IRC connection.
+ * @param w3 Pointer to the struct
+ * @param realname IRC realname
+ */
 void W3_IRC_Set_Realname(struct W3* w3, const char* realname);
+
+/**
+ * @brief Sets the servername of the IRC connection.
+ * @param w3 Pointer to the struct
+ * @param servername IRC servername
+ */
 void W3_IRC_Set_Servername(struct W3* w3, const char* servername);
+
+/**
+ * @brief Sets the nickname of the IRC connection.
+ * @param w3 Pointer to the struct
+ * @param nickname IRC nickname
+ */
 void W3_IRC_Set_Nickname(struct W3* w3, const char* nickname);
+
+/**
+ * @brief Sets the password of the IRC connection.
+ * @param w3 Pointer to the struct
+ * @param password IRC password
+ */
 void W3_IRC_Set_Password(struct W3* w3, const char* password);
+
+/**
+ * @brief Sends the IRC command.
+ * @param w3 Pointer to the struct
+ * @note This function is different with W3_Send_Request!
+ * @note When W3_Send_Request just handshakes, this function sends the IRC command!
+ */
 void W3_IRC_Send_Request(struct W3* w3);
+
+/**
+ * @brief Disconnects from the IRC.
+ * @param w3 Pointer to the struct
+ */
 void W3_IRC_Disconnect(struct W3* w3);
 
 #ifdef __cplusplus

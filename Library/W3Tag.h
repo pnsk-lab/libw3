@@ -33,13 +33,37 @@
 #ifndef __W3TAG_H__
 #define __W3TAG_H__
 
+/**
+ * @file W3Tag.h
+ * @brief Tag parser
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #include <stddef.h>
 
+/**
+ * @brief Parses the data.
+ * @param data Data to be parsed
+ * @param size Size of the data
+ * @param tagfunc Function to be called when the parser hits a tag
+ * @param tagfunc.tagname Tag name
+ * @param tagfunc.attr Tag attributes
+ * @param textfunc Function to be called when the parser hits a text
+ * @param textfunc.data Text
+ */
 void W3_Tag_Parse(char* data, size_t size, void (*tagfunc)(char* tagname, char* attr), void (*textfunc)(char* data));
+
+/**
+ * @brief Gets the attribute.
+ * @param data Data to be parsed
+ * @param name Attribute name
+ * @return
+ * - non-`NULL` if it could find the attribute
+ * - `NULL` if it couldn't
+ */
 char* W3_Tag_Attr(char* data, const char* name);
 
 #ifdef __cplusplus

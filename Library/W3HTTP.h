@@ -33,6 +33,11 @@
 #ifndef __W3HTTP_H__
 #define __W3HTTP_H__
 
+/**
+ * @file W3HTTP.h
+ * @brief HTTP part of LibW3
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -40,6 +45,11 @@ extern "C" {
 #include "W3Core.h"
 
 void __W3_HTTP_Request(struct W3* w3);
+
+/**
+ * @brief Enables the redirect.
+ * @param w3 Pointer to the struct
+ */
 void W3_HTTP_Enable_Redirect(struct W3* w3);
 
 #ifdef __cplusplus

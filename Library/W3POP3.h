@@ -33,6 +33,12 @@
 #ifndef __W3POP3_H__
 #define __W3POP3_H__
 
+/**
+ * @file W3POP3.h
+ * @brief POP3 part of LibW3
+ * @deprecated Nishi might abandon this
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -40,9 +46,33 @@ extern "C" {
 #include "W3Core.h"
 
 void __W3_POP3_Request(struct W3* w3);
+
+/**
+ * @brief Sets the username of the POP3 connection.
+ * @param w3 Pointer to the struct
+ * @param username POP3 username
+ */
 void W3_POP3_Set_Username(struct W3* w3, const char* username);
+
+/**
+ * @brief Sets the username of the POP3 connection.
+ * @param w3 Pointer to the struct
+ * @param username POP3 username
+ */
 void W3_POP3_Set_Password(struct W3* w3, const char* password);
+
+/**
+ * @brief Sends the POP3 command.
+ * @param w3 Pointer to the struct
+ * @note This function is different with W3_Send_Request!
+ * @note When W3_Send_Request just handshakes, this function sends the POP3 command!
+ */
 void W3_POP3_Send_Request(struct W3* w3);
+
+/**
+ * @brief Disconnects from the POP3.
+ * @param w3 Pointer to the struct
+ */
 void W3_POP3_Disconnect(struct W3* w3);
 
 #ifdef __cplusplus

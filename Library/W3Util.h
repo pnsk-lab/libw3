@@ -33,6 +33,11 @@
 #ifndef __W3UTIL_H__
 #define __W3UTIL_H__
 
+/**
+ * @file W3Util.h
+ * @brief LibW3 utilities
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -41,6 +46,10 @@ extern "C" {
 
 #include <stdbool.h>
 
+/**
+ * @brief Turn on/off debugging.
+ * @param do_debug Do debugging or not
+ */
 void W3_Do_Debug(bool do_debug);
 void __W3_Debug(const char* title, const char* message);
 char* __W3_Concat(const char* str1, const char* str2);

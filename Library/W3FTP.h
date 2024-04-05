@@ -33,6 +33,11 @@
 #ifndef __W3FTP_H__
 #define __W3FTP_H__
 
+/**
+ * @file W3FTP.h
+ * @brief FTP part of LibW3
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -40,9 +45,33 @@ extern "C" {
 #include "W3Core.h"
 
 void __W3_FTP_Request(struct W3* w3);
+
+/**
+ * @brief Sets the username of the FTP connection.
+ * @param w3 Pointer to the struct
+ * @param username FTP username
+ */
 void W3_FTP_Set_Username(struct W3* w3, const char* username);
+
+/**
+ * @brief Sets the password of the FTP connection.
+ * @param w3 Pointer to the struct
+ * @param password FTP password
+ */
 void W3_FTP_Set_Password(struct W3* w3, const char* password);
+
+/**
+ * @brief Sends the FTP command.
+ * @param w3 Pointer to the struct
+ * @note This function is different with W3_Send_Request!
+ * @note When W3_Send_Request just handshakes, this function sends the FTP command!
+ */
 void W3_FTP_Send_Request(struct W3* w3);
+
+/**
+ * @brief Disconnects from the FTP.
+ * @param w3 Pointer to the struct
+ */
 void W3_FTP_Disconnect(struct W3* w3);
 
 #ifdef __cplusplus

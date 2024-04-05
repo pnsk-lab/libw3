@@ -47,6 +47,10 @@ extern "C" {
 
 #include "W3Version.h"
 
+/**
+ * @warning
+ * This struct is not intended to be used directly!
+ */
 struct W3 {
 	int sock;
 	int port;
@@ -88,30 +92,73 @@ int W3_Library_Init(void);
  * @param hostname Hostname
  * @param port Port
  * @return
- * - `struct W3*` if successful.
+ * - non-`NULL` if successful.
  * - `NULL` if not.
  */
 struct W3* W3_Create(const char* protocol, const char* hostname, int port);
 
 /**
  * @brief Sets the method, or the command name.
- * @param w3 Pointer to the struct.
- * @param method Method, or command name.
+ * @param w3 Pointer to the struct
+ * @param method Method, or command name
  */
 void W3_Set_Method(struct W3* w3, const char* method);
 
 /**
  * @brief Sets the path, or the argument.
- * @param w3 Pointer to the struct.
- * @param path Path, or argument.
+ * @param w3 Pointer to the struct
+ * @param path Path, or argument
  */
 void W3_Set_Path(struct W3* w3, const char* path);
+
+/**
+ * @brief Sends the request, or just handshake.
+ * @param w3 Pointer to the struct
+ */
 void W3_Send_Request(struct W3* w3);
+
+/**
+ * @brief Sets the header.
+ * @param w3 Pointer to the struct
+ * @param key Header key
+ * @param value Header value
+ */
 void W3_Set_Header(struct W3* w3, const char* key, const char* value);
+
+/**
+ * @brief Frees the struct.
+ * @param w3 Pointer to the struct
+ */
 void W3_Free(struct W3* w3);
+
+/**
+ * @brief Sets the event handler.
+ * @param w3 Pointer to the struct
+ * @param eventname Event name
+ * @param func Function pointer
+ */
 void W3_On(struct W3* w3, const char* eventname, void* func);
+
+/**
+ * @brief Force-disconnects from the server.
+ * @param w3 Pointer to the struct
+ */
 void W3_Disconnect(struct W3* w3);
+
+/**
+ * @brief Sets the data to be sent.
+ * @param w3 Pointer to the struct
+ * @param data Data
+ * @param size Size of the data
+ */
 void W3_Set_Data(struct W3* w3, char* data, size_t size);
+
+/**
+ * @brief Sets the read buffer size.
+ * @param w3 Pointer to the struct
+ * @param size Size of the read buffer
+ * @note This method must be called before the W3_Send_Request.
+ */
 void W3_Set_Read_Size(struct W3* w3, size_t size);
 
 #ifdef __cplusplus

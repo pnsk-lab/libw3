@@ -33,20 +33,65 @@
 #ifndef __W3URL_H__
 #define __W3URL_H__
 
+/**
+ * @file W3URL.h
+ * @brief URL parser
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
+/**
+ * @brief URL struct
+ */
 struct W3URL {
+	/**
+	 * @brief Protocol
+	 */
 	char* protocol;
+
+	/**
+	 * @brief Host
+	 */
 	char* host;
+
+	/**
+	 * @brief Port
+	 */
 	int port;
+
+	/**
+	 * @brief Path
+	 */
 	char* path;
+
+	/**
+	 * @brief Username
+	 * @note `NULL` if the parser could not find the username.
+	 */
 	char* username;
+
+	/**
+	 * @brief Password
+	 * @note `NULL` if the parser could not find the password.
+	 */
 	char* password;
 };
 
+/**
+ * @brief Parses the URL.
+ * @param url URL
+ * @return
+ * - non-`NULL` if successful.
+ * - `NULL` if not.
+ */
 struct W3URL* W3_Parse_URL(const char* url);
+
+/**
+ * @brief Frees the struct.
+ * @param url Pointer to the struct
+ */
 void W3_Free_URL(struct W3URL* url);
 
 #ifdef __cplusplus
