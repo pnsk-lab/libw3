@@ -33,23 +33,61 @@
 #ifndef __W3VERSION_H__
 #define __W3VERSION_H__
 
+/**
+ * @file W3Version.h
+ * @brief LibW3 info
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
+/**
+ * Version of LibW3, but consider doing extern const char* W3_Version;
+ */
 #define LIBW3_VERSION "2.21B" \
 SUFFIX
 
-ifdef(`HTTP_SUPPORT', `#define LIBW3_HTTP_SUPPORT', `')
-ifdef(`FTP_SUPPORT', `#define LIBW3_FTP_SUPPORT', `')
-ifdef(`GOPHER_SUPPORT', `#define LIBW3_GOPHER_SUPPORT', `')
-ifdef(`GEMINI_SUPPORT', `#define LIBW3_GEMINI_SUPPORT', `')
-ifdef(`FINGER_SUPPORT', `#define LIBW3_FINGER_SUPPORT', `')
-ifdef(`NEX_SUPPORT', `#define LIBW3_NEX_SUPPORT', `')
-ifdef(`FILE_SUPPORT', `#define LIBW3_FILE_SUPPORT', `')
-ifdef(`IRC_SUPPORT', `#define LIBW3_IRC_SUPPORT', `')
-ifdef(`NNTP_SUPPORT', `#define LIBW3_NNTP_SUPPORT', `')
-ifdef(`SPARTAN_SUPPORT', `#define LIBW3_SPARTAN_SUPPORT', `')
+ifdef(`HTTP_SUPPORT', `/**
+ * Defined if HTTP support is enabled
+ */
+#define LIBW3_HTTP_SUPPORT', `')
+ifdef(`FTP_SUPPORT', `/**
+ * Defined if FTP support is enabled
+ */
+#define LIBW3_FTP_SUPPORT', `')
+ifdef(`GOPHER_SUPPORT', `/**
+ * Defined if Gopher suppport is enabled
+ */
+#define LIBW3_GOPHER_SUPPORT', `')
+ifdef(`GEMINI_SUPPORT', `/**
+ * Defined if Gemini support is enabled
+ */
+#define LIBW3_GEMINI_SUPPORT', `')
+ifdef(`FINGER_SUPPORT', `/**
+ * Defined if Finger support is enabled
+ */
+#define LIBW3_FINGER_SUPPORT', `')
+ifdef(`NEX_SUPPORT', `/**
+ * Defined if Nex support is enabled
+ */
+#define LIBW3_NEX_SUPPORT', `')
+ifdef(`FILE_SUPPORT', `/**
+ * Defined if File support is enabled
+ */
+#define LIBW3_FILE_SUPPORT', `')
+ifdef(`IRC_SUPPORT', `/**
+ * Defined if IRC support is enabled
+ */
+#define LIBW3_IRC_SUPPORT', `')
+ifdef(`NNTP_SUPPORT', `/**
+ * Defined if NNTP support is enabled
+ */
+#define LIBW3_NNTP_SUPPORT', `')
+ifdef(`SPARTAN_SUPPORT', `/**
+ * Defined if Spartan support is enabled
+ */
+#define LIBW3_SPARTAN_SUPPORT', `')
 
 #ifdef __cplusplus
 }

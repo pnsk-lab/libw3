@@ -33,6 +33,11 @@
 #ifndef __W3CORE_H__
 #define __W3CORE_H__
 
+/**
+ * @file W3Core.h
+ * @brief Core of LibW3
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -43,43 +48,71 @@ extern "C" {
 #include "W3Version.h"
 
 struct W3 {
-	int sock;	  /* Socket */
-	int port;	  /* Port */
-	char* protocol;	  /* As you can read from its name */
-	char* method;	  /* Used in HTTP	*/
-	char* path;	  /* As you can read from its name */
-	char* hostname;	  /* As you can read from its name */
-	char** headers;	  /* As you can read from its name */
-	void** events;	  /* As you can read from its name */
-	int status;	  /* As you can read from its name */
-	char* data;	  /* As you can read from its name */
-	size_t size;	  /* Size of the data */
-	size_t readsize;  /* Read buffer size, default is 512 */
-	char** props;	  /* Properties */
-	void* generic;	  /* Depends on the protocol */
-	char* tcl_header; /* Used in Tcl */
-	char* tcl_data;	  /* Used in Tcl */
-	char* tcl_status; /* Used in Tcl */
-	void* tcl_in;	  /* Used in Tcl */
-	void* ssl;	  /* Actually SSL*, NULL if no SSL */
-	void* ssl_ctx;	  /* Actually SSL_CTX* */
+	int sock;
+	int port;
+	char* protocol;
+	char* method;
+	char* path;
+	char* hostname;
+	char** headers;
+	void** events;
+	int status;
+	char* data;
+	size_t size;
+	size_t readsize;
+	char** props;
+	void* generic;
+	char* tcl_header;
+	char* tcl_data;
+	char* tcl_status;
+	void* tcl_in;
+	void* ssl;
+	void* ssl_ctx;
 
 	bool reading;
 	bool writing;
 };
 
-int W3_Library_Init(void);						    /* Initialize the Library */
-struct W3* W3_Create(const char* protocol, const char* hostname, int port); /* Create the struct */
 
-void W3_Set_Method(struct W3* w3, const char* method);		       /* Set the method */
-void W3_Set_Path(struct W3* w3, const char* path);		       /* Set the path */
-void W3_Send_Request(struct W3* w3);				       /* Send the request */
-void W3_Set_Header(struct W3* w3, const char* key, const char* value); /* Set the header */
-void W3_Free(struct W3* w3);					       /* Free the struct */
-void W3_On(struct W3* w3, const char* eventname, void* func);	       /* Set Handlers */
-void W3_Disconnect(struct W3* w3);				       /* Disconnect */
-void W3_Set_Data(struct W3* w3, char* data, size_t size);	       /* Send the data - LibW3 won't free the data */
-void W3_Set_Read_Size(struct W3* w3, size_t size);		       /* Change the read buffer size */
+/**
+ * @brief Initializes LibW3.
+ * @return
+ * - `0` if successful.
+ * - `<0` if not.
+ */
+int W3_Library_Init(void);
+
+/**
+ * @brief Creates the W3 struct.
+ * @param protocol Protocol
+ * @param hostname Hostname
+ * @param port Port
+ * @return
+ * - `struct W3*` if successful.
+ * - `NULL` if not.
+ */
+struct W3* W3_Create(const char* protocol, const char* hostname, int port);
+
+/**
+ * @brief Sets the method, or the command name.
+ * @param w3 Pointer to the struct.
+ * @param method Method, or command name.
+ */
+void W3_Set_Method(struct W3* w3, const char* method);
+
+/**
+ * @brief Sets the path, or the argument.
+ * @param w3 Pointer to the struct.
+ * @param path Path, or argument.
+ */
+void W3_Set_Path(struct W3* w3, const char* path);
+void W3_Send_Request(struct W3* w3);
+void W3_Set_Header(struct W3* w3, const char* key, const char* value);
+void W3_Free(struct W3* w3);
+void W3_On(struct W3* w3, const char* eventname, void* func);
+void W3_Disconnect(struct W3* w3);
+void W3_Set_Data(struct W3* w3, char* data, size_t size);
+void W3_Set_Read_Size(struct W3* w3, size_t size);
 
 #ifdef __cplusplus
 }
