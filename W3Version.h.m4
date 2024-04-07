@@ -57,10 +57,10 @@ const char* W3_Get_Version(void);
  *
  * @~japanese
  * @brief LibW3のバージョン
- * @note W3_Get_Version 使用することを検討してください。
+ * @note W3_Get_Version を使用することを検討してください。
  *
  */
-#define LIBW3_VERSION "2.22" \
+#define LIBW3_VERSION "2.22A" \
 SUFFIX
 
 ifdef({{HTTP_SUPPORT}}, {{/**
