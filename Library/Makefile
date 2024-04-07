@@ -57,12 +57,13 @@ endif
 ifeq ($(WINDOWS),YES)
 ./w3.dll: $(OBJS)
 	$(CC) $(LDFLAGS) -fstack-protector -L../openssl/lib/mingw/$(WINARCH) -L . -shared -Wl,--out-implib,./w3.lib -o $@ $^ $(LIBS)
+./w3.a: $(OBJS)
+	$(AR) rcs $@ $^
 else
-
 ./libw3.so: $(OBJS)
 	$(CC) $(LDFLAGS) -shared -o $@ $^ $(LIBS)
 ./libw3.a: $(OBJS)
-	ar rcs $@ $^
+	$(AR) rcs $@ $^
 endif
 
 ./%.o: ./%.c W3%.h

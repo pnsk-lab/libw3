@@ -37,6 +37,7 @@ endif
 endif
 
 CC := cc
+CC := ar
 CFLAGS := -g -std=c99 -fPIC -D_XOPEN_SOURCE=600 $(TCL_CFLAGS)
 LDFLAGS :=
 LIBS := $(TCL_LIBS)
@@ -98,6 +99,7 @@ CFLAGS += $(FLAGS)
 ifeq ($(WIN32),YES)
 CC := i686-w64-mingw32-gcc
 WINDRES := i686-w64-mingw32-windres
+AR := i686-w64-mingw32-ar
 WINDOWS := YES
 WINARCH := x86
 MINGW := i686-w64-mingw32
@@ -106,6 +108,7 @@ endif
 ifeq ($(WIN64),YES)
 CC := x86_64-w64-mingw32-gcc
 WINDRES := x86_64-w64-mingw32-windres
+AR := x86_64-w64-mingw32-ar
 WINDOWS := YES
 WINARCH := x64
 MINGW := x86_64-w64-mingw32
@@ -133,12 +136,15 @@ endif
 ifeq ($(WINDOWS),YES)
 .PHONY: all clean ./Library/w3.dll ./Example format src-archive archive replace
 
-ALL := ./Library/w3.dll ./Example
+ALL := ./Library/w3.dll ./Library/w3.a ./Example
 
 all: ./Library/W3Version.h ./w3.pc $(ALL)
 
 ./Library/w3.dll::
-	$(MAKE) -C ./Library CC=$(CC) CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" LIBS="$(LIBS)" WINDOWS=YES WINARCH=$(WINARCH) TCL=$(TCL) SSL=$(SSL)
+	$(MAKE) -C ./Library CC=$(CC) CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" LIBS="$(LIBS)" WINDOWS=YES WINARCH=$(WINARCH) TCL=$(TCL) SSL=$(SSL) ./w3.dll
+
+./Library/w3.a::
+	$(MAKE) -C ./Library CC=$(CC) CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" LIBS="$(LIBS)" WINDOWS=YES WINARCH=$(WINARCH) TCL=$(TCL) SSL=$(SSL) ./w3.a
 
 ./Example: ./Library/w3.dll
 	$(MAKE) -C ./Example CC=$(CC) TCL=$(TCL) TCL_LIBS="$(TCL_LIBS)" TCL_CFLAGS="$(TCL_CFLAGS)" HTTPD=$(HTTPD) examples SUFFIX=.exe
