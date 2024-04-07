@@ -48,17 +48,19 @@ changequote(`{{', `}}')
 extern "C" {
 #endif
 
+const char* W3_Get_Version(void);
+
 /**
  * @~english
  * @brief Version of LibW3
- * @note Consider doing `extern const char* W3_Version;`
+ * @note Consider using W3_Get_Version.
  *
  * @~japanese
  * @brief LibW3のバージョン
- * @note `extern const char* W3_Version;`をすることを検討してください。
+ * @note W3_Get_Version 使用することを検討してください。
  *
  */
-#define LIBW3_VERSION "2.21B" \
+#define LIBW3_VERSION "2.22" \
 SUFFIX
 
 ifdef({{HTTP_SUPPORT}}, {{/**

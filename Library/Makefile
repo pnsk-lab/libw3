@@ -1,7 +1,7 @@
 # $Id$
 .PHONY: clean install
 
-OBJS = ./Core.o ./Util.o ./DNS.o ./URL.o ./Tag.o
+OBJS = ./Core.o ./Util.o ./DNS.o ./URL.o ./Tag.o ./Version.o
 
 include ./protocol.mk
 
