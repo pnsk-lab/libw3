@@ -155,7 +155,7 @@ char* __W3_Get_Platform(void) {
 	info.dwOSVersionInfoSize = sizeof(OSVERSIONINFOA);
 	GetVersionEx(&info);
 	char* result = malloc(33);
-	sprintf(result, "Windows %lu.%lu.%lu", info.dwMajorVersion, info.dwMinorVersion, info.dwBuildNumber);
+	sprintf(result, "Windows %u.%u.%u", info.dwMajorVersion, info.dwMinorVersion, info.dwBuildNumber);
 	return result;
 #else
 	struct utsname un;
