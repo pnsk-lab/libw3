@@ -37,7 +37,7 @@ endif
 endif
 
 CC := cc
-CC := ar
+AR := ar
 CFLAGS := -g -std=c99 -fPIC -D_XOPEN_SOURCE=600 $(TCL_CFLAGS)
 LDFLAGS :=
 LIBS := $(TCL_LIBS)
