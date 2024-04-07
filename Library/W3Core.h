@@ -57,7 +57,7 @@ extern "C" {
  * @warning This struct is not intended to be used directly!
  *
  * @~japanese
- * @warning この構造体は直接使うことを想定されていません！
+ * @warning この構造体は直接使うことが想定されていません！
  *
  */
 struct W3 {

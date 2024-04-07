@@ -1,6 +1,7 @@
 # Documentation {#mainpage}
 
-![Logo](w3.png)
+@image html w3.png
+@image latex w3.png
 
 Welcome to the documentation of LibW3
 

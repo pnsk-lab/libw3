@@ -1,6 +1,7 @@
 # ドキュメント {#mainpage}
 
-![ロゴ](w3.png)
+@image html w3.png
+@image latex w3.png
 
 LibW3のドキュメントへようこそ
 

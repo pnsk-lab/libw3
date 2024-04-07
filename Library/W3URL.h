@@ -105,7 +105,7 @@ struct W3URL {
 	 *
 	 * @~japanese
 	 * @brief ユーザー名
-	 * @note パーサーがユーザー名を見つけられなかった場合`NULL`が返ります。
+	 * @note パーサーがユーザー名を見つけられなかった場合`NULL`になります。
 	 *
 	 */
 	char* username;
@@ -117,7 +117,7 @@ struct W3URL {
 	 *
 	 * @~japanese
 	 * @brief パスワード
-	 * @note パーサーがパスワードを見つけられなかった場合`NULL`が返ります。
+	 * @note パーサーがパスワードを見つけられなかった場合`NULL`になります。
 	 *
 	 */
 	char* password;
