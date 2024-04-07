@@ -40,9 +40,8 @@
 #include <string.h>
 
 #ifdef __MINGW32__
-#include <windows.h>
-#include <wdm.h>
 #include <winsock2.h>
+#include <windows.h>
 #else
 #include <netdb.h>
 #include <netinet/in.h>
@@ -151,10 +150,10 @@ bool __W3_Have_Header(struct W3* w3, const char* name) {
 
 char* __W3_Get_Platform(void) {
 #ifdef __MINGW32__
-	RTL_OSVERSIONINFOEXW info;
-	ZeroMemory(&info, sizeof(RTL_OSVERSIONINFOEXW));
-	info.dwOSVersionInfoSize = sizeof(RTL_OSVERSIONINFOEXW);
-	RtlGetVersion(&info);
+	OSVERSIONINFOA info;
+	ZeroMemory(&info, sizeof(OSVERSIONINFOA));
+	info.dwOSVersionInfoSize = sizeof(OSVERSIONINFOA);
+	GetVersionEx(&info);
 	char* result = malloc(33);
 	sprintf(result, "Windows %lu.%lu.%lu", info.dwMajorVersion, info.dwMinorVersion, info.dwBuildNumber);
 	return result;
