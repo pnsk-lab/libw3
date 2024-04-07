@@ -154,7 +154,7 @@ char* __W3_Get_Platform(void) {
 	RTL_OSVERSIONINFOEXW info;
 	ZeroMemory(&info, sizeof(RTL_OSVERSIONINFOEXW));
 	info.dwOSVersionInfoSize = sizeof(RTL_OSVERSIONINFOEXW);
-	RtlGetVersionEx(&info);
+	RtlGetVersion(&info);
 	char* result = malloc(33);
 	sprintf(result, "Windows %lu.%lu.%lu", info.dwMajorVersion, info.dwMinorVersion, info.dwBuildNumber);
 	return result;
