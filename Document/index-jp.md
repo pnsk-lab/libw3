@@ -1,7 +1,7 @@
 # ドキュメント {#mainpage}
 
 @image html w3.png
-@image latex w3.png
+@image latex w3.png width=7.5cm
 
 LibW3のドキュメントへようこそ
 
