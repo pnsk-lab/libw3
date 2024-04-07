@@ -35,7 +35,12 @@
 
 /**
  * @file W3IRC.h
+ * @~english
  * @brief IRC part of LibW3
+ *
+ * @~japanese
+ * @brief LibW3のIRC処理部分
+ *
  */
 
 #ifdef __cplusplus
@@ -47,58 +52,113 @@ extern "C" {
 void __W3_IRC_Request(struct W3* w3);
 
 /**
+ * @~english
  * @brief Sets the username of the IRC connection.
  * @param w3 Pointer to the struct
  * @param username IRC username
+ *
+ * @~japanese
+ * @brief IRC接続のユーザー名を設定します。
+ * @param w3 構造体へのポインター
+ * @param username IRCのユーザー名
+ *
  */
 void W3_IRC_Set_Username(struct W3* w3, const char* username);
 
 /**
+ * @~english
  * @brief Sets the hostname of the IRC connection.
  * @param w3 Pointer to the struct
  * @param hostname IRC hostname
+ *
+ * @~japanese
+ * @brief IRC接続のホスト名を設定します。
+ * @param w3 構造体へのポインター
+ * @param hostname IRCのホスト名
+ *
  */
 void W3_IRC_Set_Hostname(struct W3* w3, const char* hostname);
 
 /**
+ * @~english
  * @brief Sets the realname of the IRC connection.
  * @param w3 Pointer to the struct
  * @param realname IRC realname
+ *
+ * @~japanese
+ * @brief IRC接続のリアル名を設定します。
+ * @param w3 構造体へのポインター
+ * @param realname IRCのリアル名
+ *
  */
 void W3_IRC_Set_Realname(struct W3* w3, const char* realname);
 
 /**
+ * @~english
  * @brief Sets the servername of the IRC connection.
  * @param w3 Pointer to the struct
  * @param servername IRC servername
+ *
+ * @~japanese
+ * @brief IRC接続のサーバー名を設定します。
+ * @param w3 構造体へのポインター
+ * @param servername IRCのサーバー名
+ *
  */
 void W3_IRC_Set_Servername(struct W3* w3, const char* servername);
 
 /**
+ * @~english
  * @brief Sets the nickname of the IRC connection.
  * @param w3 Pointer to the struct
  * @param nickname IRC nickname
+ *
+ * @~japanese
+ * @brief IRC接続のニックネームを設定します。
+ * @param w3 構造体へのポインター
+ * @param nickname IRCのニックネーム
+ *
  */
 void W3_IRC_Set_Nickname(struct W3* w3, const char* nickname);
 
 /**
+ * @~english
  * @brief Sets the password of the IRC connection.
  * @param w3 Pointer to the struct
  * @param password IRC password
+ *
+ * @~japanese
+ * @brief IRC接続のパスワードを設定します。
+ * @param w3 構造体へのポインター
+ * @param password IRCのパスワード
+ *
  */
 void W3_IRC_Set_Password(struct W3* w3, const char* password);
 
 /**
+ * @~english
  * @brief Sends the IRC command.
  * @param w3 Pointer to the struct
  * @note This function is different with W3_Send_Request!
  * @note When W3_Send_Request just handshakes, this function sends the IRC command!
+ *
+ * @~japanese
+ * @brief IRCのコマンドを送ります。
+ * @note この関数は W3_Send_Request とは違います！
+ * @note W3_Send_Request は単純にハンドシェイクするだけですが、この関数はIRCのコマンドを送ります！
+ *
  */
 void W3_IRC_Send_Request(struct W3* w3);
 
 /**
+ * @~english
  * @brief Disconnects from the IRC.
  * @param w3 Pointer to the struct
+ *
+ * @~japanese
+ * @brief IRCから切断します。
+ * @param w3 構造体へのポインター
+ *
  */
 void W3_IRC_Disconnect(struct W3* w3);
 

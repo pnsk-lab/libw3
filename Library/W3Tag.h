@@ -35,7 +35,12 @@
 
 /**
  * @file W3Tag.h
+ * @~english
  * @brief Tag parser
+ *
+ * @~japanese
+ * @brief タグのパーサー
+ *
  */
 
 #ifdef __cplusplus
@@ -45,6 +50,7 @@ extern "C" {
 #include <stddef.h>
 
 /**
+ * @~english
  * @brief Parses the data.
  * @param data Data to be parsed
  * @param size Size of the data
@@ -53,16 +59,37 @@ extern "C" {
  * @param tagfunc.attr Tag attributes
  * @param textfunc Function to be called when the parser hits a text
  * @param textfunc.data Text
+ *
+ * @~japanese
+ * @brief データをパースします。
+ * @param data パースされるデータ
+ * @param size データのサイズ
+ * @param tagfunc パーサーがタグを見つけた時に呼ばれる関数ポインター
+ * @param tagfunc.tagname タグ名
+ * @param tagfunc.attr タグの属性
+ * @param textfunc パーサーがテキストを見つけた時に呼ばれる関数ポインター
+ * @param textfunc.data テキスト
+ *
  */
 void W3_Tag_Parse(char* data, size_t size, void (*tagfunc)(char* tagname, char* attr), void (*textfunc)(char* data));
 
 /**
+ * @~english
  * @brief Gets the attribute.
  * @param data Data to be parsed
  * @param name Attribute name
  * @return
  * - non-`NULL` if it could find the attribute
  * - `NULL` if it couldn't
+ *
+ * @~japanese
+ * @brief 属性を取得します。
+ * @param data パースされるデータ
+ * @param name 取得したい属性名
+ * @return
+ * - 見つかった場合は`NULL`以外。
+ * - それ以外の場合は`NULL`。
+ *
  */
 char* W3_Tag_Attr(char* data, const char* name);
 

@@ -35,7 +35,12 @@
 
 /**
  * @file W3FTP.h
+ * @~english
  * @brief FTP part of LibW3
+ *
+ * @~japanese
+ * @brief LibW3のFTP処理部分
+ *
  */
 
 #ifdef __cplusplus
@@ -47,30 +52,58 @@ extern "C" {
 void __W3_FTP_Request(struct W3* w3);
 
 /**
+ * @~english
  * @brief Sets the username of the FTP connection.
  * @param w3 Pointer to the struct
  * @param username FTP username
+ *
+ * @~japanese
+ * @brief FTP接続のユーザー名を設定します。
+ * @param w3 構造体へのポインター
+ * @param username FTPのユーザー名
+ *
  */
 void W3_FTP_Set_Username(struct W3* w3, const char* username);
 
 /**
+ * @~english
  * @brief Sets the password of the FTP connection.
  * @param w3 Pointer to the struct
  * @param password FTP password
+ *
+ * @~japanese
+ * @brief FTP接続のパスワードを設定します。
+ * @param w3 構造体へのポインター
+ * @param password FTPのパスワード
+ *
  */
 void W3_FTP_Set_Password(struct W3* w3, const char* password);
 
 /**
+ * @~english
  * @brief Sends the FTP command.
  * @param w3 Pointer to the struct
  * @note This function is different with W3_Send_Request!
  * @note When W3_Send_Request just handshakes, this function sends the FTP command!
+ *
+ * @~japanese
+ * @brief FTPのコマンドを送ります。
+ * @param w3 構造体へのポインター
+ * @note この関数は W3_Send_Request とは違います！
+ * @note W3_Send_Request は単純にハンドシェイクするだけですが、この関数はFTPのコマンドを送ります！
+ *
  */
 void W3_FTP_Send_Request(struct W3* w3);
 
 /**
+ * @~english
  * @brief Disconnects from the FTP.
  * @param w3 Pointer to the struct
+ *
+ * @~japanese
+ * @brief FTPから切断します。
+ * @param w3 構造体へのポインター
+ *
  */
 void W3_FTP_Disconnect(struct W3* w3);
 

@@ -35,7 +35,12 @@
 
 /**
  * @file W3Tcl.h
+ * @~english
  * @brief Tcl binding
+ *
+ * @~japanese
+ * @brief Tclのバインディング
+ *
  */
 
 #ifdef __cplusplus
@@ -45,9 +50,16 @@ extern "C" {
 #include <tcl.h>
 
 /**
- * @brief Initializes LibW3 for Tcl
+ * @~english
+ * @brief Initializes LibW3 for Tcl.
  * @param interp Tcl interpreter
  * @return Tcl error code
+ *
+ * @~japanese
+ * @brief Tcl用にLibW3を初期化します。
+ * @param interp Tclのインタプリター
+ * @return Tclのエラーコード
+ *
  */
 int W3_Init(Tcl_Interp* interp);
 

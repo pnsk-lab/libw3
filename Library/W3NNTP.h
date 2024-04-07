@@ -35,7 +35,12 @@
 
 /**
  * @file W3NNTP.h
+ * @~english
  * @brief NNTP part of LibW3
+ *
+ * @~japanese
+ * @brief LibW3のNNTP処理部分
+ *
  */
 
 #ifdef __cplusplus
@@ -47,16 +52,30 @@ extern "C" {
 void __W3_NNTP_Request(struct W3* w3);
 
 /**
+ * @~english
  * @brief Sends the NNTP command.
  * @param w3 Pointer to the struct
  * @note This function is different with W3_Send_Request!
  * @note When W3_Send_Request just handshakes, this function sends the NNTP command!
+ *
+ * @~japanese
+ * @brief NNTPのコマンドを送ります。
+ * @param w3 構造体へのポインター
+ * @note この関数は W3_Send_Request とは違います！
+ * @note W3_Send_Request は単純にハンドシェイクするだけですが、この関数はFTPのコマンドを送ります！
+ *
  */
 void W3_NNTP_Send_Request(struct W3* w3);
 
 /**
+ * @~english
  * @brief Disconnects from the NNTP.
  * @param w3 Pointer to the struct
+ *
+ * @~japanese
+ * @brief NNTPから切断します。
+ * @param w3 構造体へのポインター
+ *
  */
 void W3_NNTP_Disconnect(struct W3* w3);
 

@@ -35,7 +35,12 @@
 
 /**
  * @file W3URL.h
+ * @~english
  * @brief URL parser
+ *
+ * @~japanese
+ * @brief URLパーサー
+ *
  */
 
 #ifdef __cplusplus
@@ -43,54 +48,108 @@ extern "C" {
 #endif
 
 /**
+ * @~english
  * @brief URL struct
+ * @note In the future it would be able to get attribute using functions. Probably.
+ *
+ * @~japanese
+ * @brief URL構造体
+ * @note 将来的には関数で属性を取得できるようになると思います。多分。
+ *
  */
 struct W3URL {
 	/**
+	 * @~english
 	 * @brief Protocol
+	 *
+	 * @~japanese
+	 * @brief プロトコル名
+	 *
 	 */
 	char* protocol;
 
 	/**
+	 * @~english
 	 * @brief Host
+	 *
+	 * @~japanese
+	 * @brief ホスト名
+	 *
 	 */
 	char* host;
 
 	/**
+	 * @~english
 	 * @brief Port
+	 *
+	 * @~japanese
+	 * @brief ポート
+	 *
 	 */
 	int port;
 
 	/**
+	 * @~english
 	 * @brief Path
+	 *
+	 * @~japanese
+	 * @brief パス
+	 *
 	 */
 	char* path;
 
 	/**
+	 * @~english
 	 * @brief Username
 	 * @note `NULL` if the parser could not find the username.
+	 *
+	 * @~japanese
+	 * @brief ユーザー名
+	 * @note パーサーがユーザー名を見つけられなかった場合`NULL`が返ります。
+	 *
 	 */
 	char* username;
 
 	/**
+	 * @~english
 	 * @brief Password
 	 * @note `NULL` if the parser could not find the password.
+	 *
+	 * @~japanese
+	 * @brief パスワード
+	 * @note パーサーがパスワードを見つけられなかった場合`NULL`が返ります。
+	 *
 	 */
 	char* password;
 };
 
 /**
+ * @~english
  * @brief Parses the URL.
  * @param url URL
  * @return
  * - non-`NULL` if successful.
  * - `NULL` if not.
+ *
+ * @~japanese
+ * @brief URLをパースします。
+ * @param url URL
+ * @return
+ * - 成功した場合は`NULL`以外。
+ * - それ以外の場合は`NULL`。
+ *
  */
 struct W3URL* W3_Parse_URL(const char* url);
 
 /**
+ * @~english
  * @brief Frees the struct.
  * @param url Pointer to the struct
+ *
+ * @~japanese
+ * @brief 構造体を解放します。
+ * @param url 構造体へのポインター
+ *
  */
 void W3_Free_URL(struct W3URL* url);
 

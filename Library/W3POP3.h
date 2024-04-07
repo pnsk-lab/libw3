@@ -35,8 +35,14 @@
 
 /**
  * @file W3POP3.h
+ * @~english
  * @brief POP3 part of LibW3
  * @deprecated Nishi might abandon this
+ *
+ * @~japanese
+ * @brief LibW3のPOP3処理部分
+ * @deprecated Nishiが廃止するかもしれません
+ *
  */
 
 #ifdef __cplusplus
@@ -48,30 +54,58 @@ extern "C" {
 void __W3_POP3_Request(struct W3* w3);
 
 /**
+ * @~english
  * @brief Sets the username of the POP3 connection.
  * @param w3 Pointer to the struct
  * @param username POP3 username
+ *
+ * @~japanese
+ * @brief POP3接続のユーザー名を設定します。
+ * @param w3 構造体へのポインター
+ * @param username POP3のユーザー名
+ *
  */
 void W3_POP3_Set_Username(struct W3* w3, const char* username);
 
 /**
- * @brief Sets the username of the POP3 connection.
+ * @~english
+ * @brief Sets the password of the POP3 connection.
  * @param w3 Pointer to the struct
- * @param username POP3 username
+ * @param password POP3 password
+ *
+ * @~japanese
+ * @brief POP3接続のパスワードを設定します。
+ * @param w3 構造体へのポインター
+ * @param password POP3のパスワード
+ *
  */
 void W3_POP3_Set_Password(struct W3* w3, const char* password);
 
 /**
+ * @~english
  * @brief Sends the POP3 command.
  * @param w3 Pointer to the struct
  * @note This function is different with W3_Send_Request!
  * @note When W3_Send_Request just handshakes, this function sends the POP3 command!
+ *
+ * @~japanese
+ * @brief POP3のコマンドを送ります。
+ * @param w3 構造体へのポインター
+ * @note この関数は W3_Send_Request とは違います！
+ * @note W3_Send_Request は単純にハンドシェイクするだけですが、この関数はPOP3のコマンドを送ります！
+ *
  */
 void W3_POP3_Send_Request(struct W3* w3);
 
 /**
+ * @~english
  * @brief Disconnects from the POP3.
  * @param w3 Pointer to the struct
+ *
+ * @~japanese
+ * @brief POP3から切断します。
+ * @param w3 構造体へのポインター
+ *
  */
 void W3_POP3_Disconnect(struct W3* w3);
 

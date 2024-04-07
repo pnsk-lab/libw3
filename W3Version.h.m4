@@ -29,13 +29,19 @@
 /* OF SUCH DAMAGE.                                                            */
 /* -------------------------------------------------------------------------- */
 /* --- END LICENSE --- */
+changequote(`{{', `}}')
 
 #ifndef __W3VERSION_H__
 #define __W3VERSION_H__
 
 /**
  * @file W3Version.h
+ * @~english
  * @brief LibW3 info
+ *
+ * @~japanese
+ * @brief LibW3の情報
+ *
  */
 
 #ifdef __cplusplus
@@ -43,51 +49,117 @@ extern "C" {
 #endif
 
 /**
- * Version of LibW3, but consider doing extern const char* W3_Version;
+ * @~english
+ * @brief Version of LibW3
+ * @note Consider doing `extern const char* W3_Version;`
+ *
+ * @~japanese
+ * @brief LibW3のバージョン
+ * @note `extern const char* W3_Version;`をすることを検討してください。
+ *
  */
 #define LIBW3_VERSION "2.21B" \
 SUFFIX
 
-ifdef(`HTTP_SUPPORT', `/**
- * Defined if HTTP support is enabled
+ifdef({{HTTP_SUPPORT}}, {{/**
+ * @~english
+ * @brief Defined if HTTP support is enabled
+ *
+ * @~japanese
+ * @brief HTTPサポートが有効化されてる場合に定義
+ *
  */
-#define LIBW3_HTTP_SUPPORT', `')
-ifdef(`FTP_SUPPORT', `/**
- * Defined if FTP support is enabled
+#define LIBW3_HTTP_SUPPORT}}, {{}})
+
+ifdef({{FTP_SUPPORT}}, {{/**
+ * @~english
+ * @brief Defined if FTP support is enabled
+ *
+ * @~japanese
+ * @brief FTPサポートが有効化されてる場合に定義
+ *
  */
-#define LIBW3_FTP_SUPPORT', `')
-ifdef(`GOPHER_SUPPORT', `/**
- * Defined if Gopher suppport is enabled
+#define LIBW3_FTP_SUPPORT}}, {{}})
+
+ifdef({{GOPHER_SUPPORT}}, {{/**
+ * @~english
+ * @brief Defined if Gopher suppport is enabled
+ *
+ * @~japanese
+ * @brief Gopherサポートが有効化されてる場合に定義
+ *
  */
-#define LIBW3_GOPHER_SUPPORT', `')
-ifdef(`GEMINI_SUPPORT', `/**
- * Defined if Gemini support is enabled
+#define LIBW3_GOPHER_SUPPORT}}, {{}})
+
+ifdef({{GEMINI_SUPPORT}}, {{/**
+ * @~english
+ * @brief Defined if Gemini support is enabled
+ *
+ * @~japanese
+ * @brief Geminiサポートが有効化されてる場合に定義
+ *
  */
-#define LIBW3_GEMINI_SUPPORT', `')
-ifdef(`FINGER_SUPPORT', `/**
- * Defined if Finger support is enabled
+#define LIBW3_GEMINI_SUPPORT}}, {{}})
+
+ifdef({{FINGER_SUPPORT}}, {{/**
+ * @~english
+ * @brief Defined if Finger support is enabled
+ *
+ * @~japanese
+ * @brief Fingerサポートが有効化されてる場合に定義
+ *
  */
-#define LIBW3_FINGER_SUPPORT', `')
-ifdef(`NEX_SUPPORT', `/**
- * Defined if Nex support is enabled
+#define LIBW3_FINGER_SUPPORT}}, {{}})
+
+ifdef({{NEX_SUPPORT}}, {{/**
+ * @~english
+ * @brief Defined if Nex support is enabled
+ *
+ * @~japanese
+ * @brief Nexサポートが有効化されてる場合に定義
+ *
  */
-#define LIBW3_NEX_SUPPORT', `')
-ifdef(`FILE_SUPPORT', `/**
- * Defined if File support is enabled
+#define LIBW3_NEX_SUPPORT}}, {{}})
+
+ifdef({{FILE_SUPPORT}}, {{/**
+ * @~english
+ * @brief Defined if File support is enabled
+ *
+ * @~japanese
+ * @brief Fileサポートが有効化されてる場合に定義
+ *
  */
-#define LIBW3_FILE_SUPPORT', `')
-ifdef(`IRC_SUPPORT', `/**
- * Defined if IRC support is enabled
+#define LIBW3_FILE_SUPPORT}}, {{}})
+
+ifdef({{IRC_SUPPORT}}, {{/**
+ * @~english
+ * @brief Defined if IRC support is enabled
+ *
+ * @~japanese
+ * @brief IRCサポートが有効化されてる場合に定義
+ *
  */
-#define LIBW3_IRC_SUPPORT', `')
-ifdef(`NNTP_SUPPORT', `/**
- * Defined if NNTP support is enabled
+#define LIBW3_IRC_SUPPORT}}, {{}})
+
+ifdef({{NNTP_SUPPORT}}, {{/**
+ * @~english
+ * @brief Defined if NNTP support is enabled
+ *
+ * @~japanese
+ * @brief NNTPサポートが有効化されてる場合に定義
+ *
  */
-#define LIBW3_NNTP_SUPPORT', `')
-ifdef(`SPARTAN_SUPPORT', `/**
- * Defined if Spartan support is enabled
+#define LIBW3_NNTP_SUPPORT}}, {{}})
+
+ifdef({{SPARTAN_SUPPORT}}, {{/**
+ * @~english
+ * @brief Defined if Spartan support is enabled
+ *
+ * @~japanese
+ * @brief Spartanサポートが有効化されてる場合に定義
+ *
  */
-#define LIBW3_SPARTAN_SUPPORT', `')
+#define LIBW3_SPARTAN_SUPPORT}}, {{}})
 
 #ifdef __cplusplus
 }

@@ -35,7 +35,12 @@
 
 /**
  * @file W3HTTP.h
+ * @~english
  * @brief HTTP part of LibW3
+ *
+ * @~japanese
+ * @brief LibW3のHTTP処理部分
+ *
  */
 
 #ifdef __cplusplus
@@ -47,8 +52,14 @@ extern "C" {
 void __W3_HTTP_Request(struct W3* w3);
 
 /**
+ * @~english
  * @brief Enables the redirect.
  * @param w3 Pointer to the struct
+ *
+ * @~japanese
+ * @brief リダイレクトを有効化します。
+ * @param w3 構造体へのポインター
+ *
  */
 void W3_HTTP_Enable_Redirect(struct W3* w3);
 

@@ -35,7 +35,12 @@
 
 /**
  * @file W3Core.h
+ * @~english
  * @brief Core of LibW3
+ *
+ * @~japanese
+ * @brief LibW3のコア部分
+ *
  */
 
 #ifdef __cplusplus
@@ -48,8 +53,12 @@ extern "C" {
 #include "W3Version.h"
 
 /**
- * @warning
- * This struct is not intended to be used directly!
+ * @~english
+ * @warning This struct is not intended to be used directly!
+ *
+ * @~japanese
+ * @warning この構造体は直接使うことを想定されていません！
+ *
  */
 struct W3 {
 	int sock;
@@ -78,14 +87,23 @@ struct W3 {
 };
 
 /**
+ * @~english
  * @brief Initializes LibW3.
  * @return
  * - `0` if successful.
  * - `<0` if not.
+ *
+ * @~japanese
+ * @brief LibW3を初期化します。
+ * @return
+ * - 成功した場合は`0`。
+ * - それ以外の場合は`<0`。
+ *
  */
 int W3_Library_Init(void);
 
 /**
+ * @~english
  * @brief Creates the W3 struct.
  * @param protocol Protocol
  * @param hostname Hostname
@@ -93,70 +111,144 @@ int W3_Library_Init(void);
  * @return
  * - non-`NULL` if successful.
  * - `NULL` if not.
+ *
+ * @~japanese
+ * @brief 構造体 W3 を作ります。
+ * @param protocol プロトコル名
+ * @param hostname ホスト名
+ * @param port ポート
+ * @return
+ * - 成功した場合は`NULL`以外。
+ * - それ以外の場合は`NULL`。
+ *
  */
 struct W3* W3_Create(const char* protocol, const char* hostname, int port);
 
 /**
+ * @~english
  * @brief Sets the method, or the command name.
  * @param w3 Pointer to the struct
  * @param method Method, or command name
+ *
+ * @~japanese
+ * @brief メソッドかコマンド名を設定します。
+ * @param w3 構造体へのポインター
+ * @param method メソッドかコマンド名
+ *
  */
 void W3_Set_Method(struct W3* w3, const char* method);
 
 /**
+ * @~english
  * @brief Sets the path, or the argument.
  * @param w3 Pointer to the struct
  * @param path Path, or argument
+ *
+ * @~japanese
+ * @brief パスか引数を設定します。
+ * @param w3 構造体へのポインター
+ * @param path パスか引き数
+ *
  */
 void W3_Set_Path(struct W3* w3, const char* path);
 
 /**
+ * @~english
  * @brief Sends the request, or just handshake.
  * @param w3 Pointer to the struct
+ *
+ * @~japanese
+ * @brief リクエストを送るか、単にハンドシェイクします。
+ * @param w3 構造体へのポインター
+ *
  */
 void W3_Send_Request(struct W3* w3);
 
 /**
+ * @~english
  * @brief Sets the header.
  * @param w3 Pointer to the struct
  * @param key Header key
  * @param value Header value
+ *
+ * @~japanese
+ * @brief ヘッダーを設定します。
+ * @param w3 構造体へのポインター
+ * @param key ヘッダーのキー
+ * @param value ヘッダーの値
+ *
  */
 void W3_Set_Header(struct W3* w3, const char* key, const char* value);
 
 /**
+ * @~english
  * @brief Frees the struct.
  * @param w3 Pointer to the struct
+ *
+ * @~japanese
+ * @brief 構造体を解放します。
+ * @param w3 構造体へのポインター
+ *
  */
 void W3_Free(struct W3* w3);
 
 /**
+ * @~english
  * @brief Sets the event handler.
  * @param w3 Pointer to the struct
  * @param eventname Event name
  * @param func Function pointer
+ *
+ * @~japanese
+ * @brief イベントハンドラーを設定します。
+ * @param w3 構造体へのポインター
+ * @param eventname イベント名
+ * @param func 関数ポインター
+ *
  */
 void W3_On(struct W3* w3, const char* eventname, void* func);
 
 /**
+ * @~english
  * @brief Force-disconnects from the server.
  * @param w3 Pointer to the struct
+ *
+ * @~japanese
+ * @brief 強制的にサーバーから切断します。
+ * @param w3 構造体へのポインター
+ *
  */
 void W3_Disconnect(struct W3* w3);
 
 /**
+ * @~english
  * @brief Sets the data to be sent.
  * @param w3 Pointer to the struct
  * @param data Data
  * @param size Size of the data
+ *
+ * @~japanese
+ * @brief 送信するデータを設定します。
+ * @param w3 構造体へのポインター
+ * @param data データ
+ * @param size データのサイズ
+ *
  */
 void W3_Set_Data(struct W3* w3, char* data, size_t size);
 
 /**
+ * @~english
  * @brief Sets the read buffer size.
  * @param w3 Pointer to the struct
  * @param size Size of the read buffer
  * @note This method must be called before the W3_Send_Request.
+ *
+ * @~japanese
+ * @brief 読み込みバッファーのサイズを設定します。
+ * @param w3 構造体へのポインター
+ * @param size 読み込みバッファーのサイズ
+ * @note この関数は W3_Send_Request の前に呼ばれる必要があります。
+ *
  */
 void W3_Set_Read_Size(struct W3* w3, size_t size);
 

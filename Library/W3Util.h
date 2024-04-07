@@ -35,7 +35,12 @@
 
 /**
  * @file W3Util.h
+ * @~english
  * @brief LibW3 utilities
+ *
+ * @~japanese
+ * @brief LibW3のユーティリティー
+ *
  */
 
 #ifdef __cplusplus
@@ -47,8 +52,14 @@ extern "C" {
 #include <stdbool.h>
 
 /**
+ * @~english
  * @brief Turn on/off debugging.
  * @param do_debug Do debugging or not
+ *
+ * @~japanese
+ * @brief デバッグを有効化/無効化します。
+ * @param do_debug デバッグの有無
+ *
  */
 void W3_Do_Debug(bool do_debug);
 void __W3_Debug(const char* title, const char* message);
