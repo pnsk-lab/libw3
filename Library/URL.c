@@ -163,9 +163,9 @@ struct W3URL* W3_Parse_URL(const char* _url) {
 					r->port = 119;
 				} else if(strcmp(r->protocol, "irc") == 0) {
 					r->port = 6667;
-				}  else if(strcmp(r->protocol, "ircs") == 0) {
+				} else if(strcmp(r->protocol, "ircs") == 0) {
 					r->port = 6697;
-				}else if(strcmp(r->protocol, "spartan") == 0) {
+				} else if(strcmp(r->protocol, "spartan") == 0) {
 					r->port = 300;
 				}
 			}

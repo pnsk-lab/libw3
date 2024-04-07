@@ -54,7 +54,7 @@ void __W3_Spartan_Request(struct W3* w3) {
 	__W3_Auto_Write(w3, conlen, strlen(conlen));
 	free(conlen);
 	__W3_Auto_Write(w3, "\r\n", 2);
-	if(w3->data != NULL){
+	if(w3->data != NULL) {
 		__W3_Auto_Write(w3, w3->data, w3->size);
 	}
 	char* buf = malloc(w3->readsize);

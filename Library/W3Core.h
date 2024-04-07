@@ -77,7 +77,6 @@ struct W3 {
 	bool writing;
 };
 
-
 /**
  * @brief Initializes LibW3.
  * @return
