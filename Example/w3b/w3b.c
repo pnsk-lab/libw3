@@ -282,8 +282,8 @@ void html_handler(char* tagname, char* attr) {
 			char* alt = W3_Tag_Attr(attr, "alt");
 			if(alt != NULL) {
 				printf("[%s]", alt);
-				free(alt);
 				x += 2 + strlen(alt);
+				free(alt);
 			} else {
 				printf("[IMG]");
 				x += 5;
