@@ -60,7 +60,7 @@ const char* W3_Get_Version(void);
  * @note W3_Get_Version を使用することを検討してください。
  *
  */
-#define LIBW3_VERSION "2.23" \
+#define LIBW3_VERSION "2.23A" \
 SUFFIX
 
 ifdef({{HTTP_SUPPORT}}, {{/**

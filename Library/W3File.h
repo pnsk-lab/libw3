@@ -50,7 +50,24 @@ extern "C" {
 #include "W3Core.h"
 void __W3_File_Request(struct W3* w3);
 
+/**
+ * @~english
+ * @brief Passed to `status` event when the file was found.
+ *
+ * @~japanese
+ * @brief ファイルが見つかったときに`status`イベントに渡されます。
+ *
+ */
 #define LIBW3_FILE_FOUND 0
+
+/**
+ * @~english
+ * @brief Passed to `status` event when the file was not found.
+ *
+ * @~japanese
+ * @brief ファイルが見つからなかったときに`status`イベントに渡されます。
+ *
+ */
 #define LIBW3_FILE_NOT_FOUND 1
 
 #ifdef __cplusplus
