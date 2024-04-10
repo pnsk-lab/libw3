@@ -1,9 +1,13 @@
-# Documentation {#mainpage}
+# Abstract {#mainpage}
 
-@image html w3.png width=48px
-@image latex w3.png width=7.5cm
+**LibW3** is a general-purpose, platform independent, and low-level C WWW library.
 
-Welcome to the documentation of LibW3
+Its mission is to provide usually used protocols, while providing "open-source" protocols like Gemini.
+
+## License
+
+**LibW3** is free software, and sources are published under 3-clause BSD License.
+
 
 @example fetch.c
 @example interactive.c

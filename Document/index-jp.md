@@ -1,9 +1,4 @@
-# ドキュメント {#mainpage}
-
-@image html w3.png width=48px
-@image latex w3.png width=7.5cm
-
-LibW3のドキュメントへようこそ
+# アブストラクト {#mainpage}
 
 @example fetch.c
 @example interactive.c
