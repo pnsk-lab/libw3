@@ -33,6 +33,16 @@
 #ifndef __W3DNS_H__
 #define __W3DNS_H__
 
+/**
+ * @file W3DNS.h
+ * @~english
+ * @brief DNS/connecting part of LibW3
+ *
+ * @~japanese
+ * @brief LibW3のDNS/接続処理部分
+ *
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif

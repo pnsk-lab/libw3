@@ -33,6 +33,16 @@
 #ifndef __W3FINGER_H__
 #define __W3FINGER_H__
 
+/**
+ * @file W3Finger.h
+ * @~english
+ * @brief Finger part of LibW3
+ *
+ * @~japanese
+ * @brief LibW3のFinger処理部分
+ *
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif

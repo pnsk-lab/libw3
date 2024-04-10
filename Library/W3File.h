@@ -33,6 +33,16 @@
 #ifndef __W3FILE_H__
 #define __W3FILE_H__
 
+/**
+ * @file W3File.h
+ * @~english
+ * @brief File part of LibW3
+ *
+ * @~japanese
+ * @brief LibW3のFile処理部分
+ *
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif

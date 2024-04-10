@@ -33,6 +33,16 @@
 #ifndef __W3GEMINI_H__
 #define __W3GEMINI_H__
 
+/**
+ * @file W3Gemini.h
+ * @~english
+ * @brief Gemini part of LibW3
+ *
+ * @~japanese
+ * @brief LibW3のGemini処理部分
+ *
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif

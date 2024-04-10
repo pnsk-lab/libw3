@@ -33,6 +33,16 @@
 #ifndef __W3GOPHER_H__
 #define __W3GOPHER_H__
 
+/**
+ * @file W3Gopher.h
+ * @~english
+ * @brief Gopher part of LibW3
+ *
+ * @~japanese
+ * @brief LibW3のGopher処理部分
+ *
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif

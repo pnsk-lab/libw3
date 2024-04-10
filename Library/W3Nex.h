@@ -33,6 +33,16 @@
 #ifndef __W3NEX_H__
 #define __W3NEX_H__
 
+/**
+ * @file W3Nex.h
+ * @~english
+ * @brief Nex part of LibW3
+ *
+ * @~japanese
+ * @brief LibW3のNex処理部分
+ *
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif

@@ -33,6 +33,16 @@
 #ifndef __W3SPARTAN_H__
 #define __W3SPARTAN_H__
 
+/**
+ * @file W3Spartan.h
+ * @~english
+ * @brief Spartan part of LibW3
+ *
+ * @~japanese
+ * @brief LibW3のSpartan処理部分
+ *
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif
