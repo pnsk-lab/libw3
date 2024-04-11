@@ -1,13 +1,12 @@
 # アブストラクト {#mainpage}
 
-**LibW3** is a general-purpose, platform independent, and low-level C WWW library.
+**LibW3** は普通に使える、プラットフォームに依存しない、低レベルなCで書かれたWWWのためのライブラリです。
 
-Its mission is to provide usually used protocols, while providing "open-source" protocols like Gemini.
+これの目的はGeminiのような「オープンソース」なプロトコルも提供しながら、よく使われるプロトコルのサポートを提供することです。
 
-## License
+## ライセンス
 
-**LibW3** is free software, and sources are published under 3-clause BSD License.
-
+**LibW3** はフリーソフトウェアで、ソースコードは3条項BSDライセンスで公開されています。
 
 @example fetch.c
 @example interactive.c
