@@ -10,6 +10,7 @@ Document:        http://docs.nishi.boats/libw3   (English)
 Mirrors at:
 1. https://github.com/nissmick/libw3
    Do not send the pull requests to this! Just send me email.
+2. https://git.chaotic.ninja/usr/nishi/libw3/
 
 Example applications:
 1. TkW3. Simple browser written in C and Tcl/Tk.
