@@ -137,6 +137,7 @@ struct W3* W3_Create(const char* protocol, const char* hostname, int port) {
 	w3->path = NULL;
 	w3->events = NULL;
 	w3->headers = NULL;
+	w3->hostname = NULL;
 	w3->size = 0;
 	w3->data = NULL;
 	w3->sock = -1;
