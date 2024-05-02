@@ -23,8 +23,10 @@ include ./Library/protocol.mk
 
 ifeq ($(shell uname -s),SunOS)
 GREP = ggrep
+SED = gsed
 else
 GREP = grep
+SED = sed
 endif
 
 ifeq ($(TCL),YES)
@@ -134,7 +136,7 @@ CFLAGS += -g
 endif
 
 ifeq ($(WINDOWS),YES)
-.PHONY: all clean ./Library/w3.dll ./Example format src-archive archive replace
+.PHONY: all clean ./Library/w3.dll ./Example format src-archive archive replace build-svr4
 
 ALL := ./Library/w3.dll ./Library/w3.a ./Example
 
@@ -154,7 +156,7 @@ all: ./Library/W3Version.h ./w3.pc $(ALL)
 
 else
 
-.PHONY: all clean ./Library/libw3.so ./Library/libw3.a ./Example format src-archive archive replace
+.PHONY: all clean ./Library/libw3.so ./Library/libw3.a ./Example format src-archive archive replace build-svr4
 
 ALL := ./Library/libw3.so ./Library/libw3.a ./Example
 
@@ -270,3 +272,22 @@ replace:
 		cat $$i | perl replace.pl > $$i.new; \
 		mv $$i.new $$i; \
 	done
+
+build-svr4: all
+	rm -rf NSClibw3
+	rm -rf NSClibw3-Info
+	mkdir -p NSClibw3-Info
+	mkdir -p NSClibw3
+	mkdir -p NSClibw3/lib
+	mkdir -p NSClibw3/include/W3
+	cp -rf Library/*.so NSClibw3/lib/
+	cp -rf Library/*.a NSClibw3/lib/
+	cp -rf Library/*.h NSClibw3/include/W3/
+	pkgproto ./NSClibw3 | $(SED) -E "s/[^ ]+ [^ ]+$$/root sys/g" > NSClibw3-Info/pkgproto.tmp2
+	echo "i pkginfo" > NSClibw3-Info/pkgproto.tmp1
+	cat NSClibw3-Info/pkgproto.* > NSClibw3-Info/prototype
+	rm NSClibw3-Info/pkgproto.*
+	echo PKG=NSClibw3 > NSClibw3-Info/pkginfo
+	echo NAME=WWW Library >> NSClibw3-Info/pkginfo
+	echo CATEGORY=web >> NSClibw3-Info/pkginfo
+	cd NSClibw3-Info && pkgmk -r ..
