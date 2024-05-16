@@ -48,6 +48,16 @@ changequote(`{{', `}}')
 extern "C" {
 #endif
 
+/**
+ * @~english
+ * @brief Get the version of LibW3
+ * @return Version of LibW3
+ *
+ * @~japanese
+ * @brief LibW3のバージョンを取得します。
+ * @return LibW3のバージョン
+ *
+ */
 const char* W3_Get_Version(void);
 
 /**
