@@ -1,0 +1,28 @@
+Builds available at:
+1. https://pub.tty7.uk/pub/libw3
+2. ftp://host.tty7.uk/pub/libw3
+
+Main repository: http://sw.nishi.boats/sw/~nishi/libw3
+Website:         http://nishi.boats/libw3
+Document:        http://docs.nishi.boats/libw3   (English)
+                 http://docs.nishi.boats/libw3jp (Japanese)
+
+Mirrors at:
+1. https://github.com/pnsk-lab/libw3
+   Do not send the pull requests to this! Just send me email.
+2. https://git.chaotic.ninja/usr/nishi/libw3/
+3. https://git-mirror.nishi.boats/?p=libw3.git
+
+Example applications:
+1. TkW3. Simple browser written in C and Tcl/Tk.
+   http://sw.nishi.boats/sw/~nishi/tkw3
+2. nirc. Simple IRC client writtein C.
+   http://sw.nishi.boats/sw/~nishi/nirc
+
+IRC:
+1. #libw3 on BoatsNET ( http://irc.nishi.boats )
+
+Mailing list:
+1. http://mail-index.nishi.boats/mailman/listinfo/libw3-commits
+2. http://mail-index.nishi.boats/mailman/listinfo/libw3-users
+See http://docs.nishi.boats/libw3 (or http://docs.nishi.boats/libw3.pdf for PDF) for the reference.

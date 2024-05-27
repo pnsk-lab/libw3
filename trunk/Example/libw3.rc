@@ -1,0 +1,11 @@
+id ICON "../w3.ico"
+VS_VERSION_INFO VERSIONINFO
+BEGIN
+        BLOCK "StringFileInfo"
+        BEGIN
+                BLOCK "000004b0"
+                BEGIN
+                        VALUE "ProductName", "LibW3 Tool\0"
+                END
+        END
+END
