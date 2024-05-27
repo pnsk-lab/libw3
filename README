@@ -8,9 +8,10 @@ Document:        http://docs.nishi.boats/libw3   (English)
                  http://docs.nishi.boats/libw3jp (Japanese)
 
 Mirrors at:
-1. https://github.com/nissmick/libw3
+1. https://github.com/pnsk-lab/libw3
    Do not send the pull requests to this! Just send me email.
 2. https://git.chaotic.ninja/usr/nishi/libw3/
+3. https://git-mirror.nishi.boats/?p=libw3.git
 
 Example applications:
 1. TkW3. Simple browser written in C and Tcl/Tk.
@@ -20,9 +21,8 @@ Example applications:
 
 IRC:
 1. #libw3 on BoatsNET ( http://irc.nishi.boats )
-2. #announce on BoatsNET for SVN log
 
 Mailing list:
 1. http://mail-index.nishi.boats/mailman/listinfo/libw3-commits
 2. http://mail-index.nishi.boats/mailman/listinfo/libw3-users
-See http://nishi.boats/libw3/guide for the reference.
+See http://docs.nishi.boats/libw3 (or http://docs.nishi.boats/libw3.pdf for PDF) for the reference.
