@@ -8,16 +8,21 @@
 #include <W3HTTP.h>
 #include <W3Util.h>
 
+#ifdef __MINGW32__
+#include <winsock2.h>
+#include <windows.h>
+#else
 #include <arpa/inet.h>
 #include <dirent.h>
 #include <netinet/in.h>
 #include <netinet/tcp.h>
+#include <sys/socket.h>
+#endif
 #include <signal.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/socket.h>
 #include <sys/stat.h>
 #include <unistd.h>
 
